@@ -44,6 +44,7 @@ class OpenDBHelper(context: Context, name: String, factory: SQLiteDatabase.Curso
 
         while (cursor.moveToNext()) {
             val contact = Contact()
+            contact.id = cursor.getInt(0)
             contact.firstName = cursor.getString(1)
             contact.lastName = cursor.getString(2)
             contact.cellPhone = cursor.getString(3)
@@ -52,5 +53,18 @@ class OpenDBHelper(context: Context, name: String, factory: SQLiteDatabase.Curso
         }
         db.close()
         return list
+    }
+
+    fun deleteContact(id : Int): Boolean {
+        try {
+            var deleteQuery = "DELETE FROM tbl_contacts WHERE _id = " + id
+
+            var db = this.writableDatabase
+            db.execSQL(deleteQuery)
+            db.close()
+            return true
+        } catch (e: SQLException) {
+            return false
+        }
     }
 }

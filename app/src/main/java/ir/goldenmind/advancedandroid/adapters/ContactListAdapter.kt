@@ -9,14 +9,11 @@ import ir.goldenmind.advancedandroid.R
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.contact_recyclerview_item.view.*
 
-class ContactListAdapter(contactList: List<Contact>, private val mOnClickListener: ListItemClickListener) : RecyclerView.Adapter<ContactListAdapter.ContactViewHolder>() {
+class ContactListAdapter(contactList: List<Contact>, val clickListener: (Contact) -> Unit) :
+    RecyclerView.Adapter<ContactListAdapter.ContactViewHolder>() {
 
     val contactList = contactList
 
-
-    interface ListItemClickListener {
-        fun onListItemClick(clickedItemIndex: Int)
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
 
@@ -27,9 +24,12 @@ class ContactListAdapter(contactList: List<Contact>, private val mOnClickListene
 
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
 
-        val contact = contactList.get(position)
-        holder.tvFullName.text = contact.firstName + " " + contact.lastName
-        holder.tvCellPhone.text = contact.cellPhone
+//        val contact = contactList.get(position)
+//        holder.tvFullName.text = contact.firstName + " " + contact.lastName
+//        holder.tvCellPhone.text = contact.cellPhone
+        (holder as ContactViewHolder).bind(contactList[position], clickListener)
+
+
 
     }
 
@@ -38,15 +38,15 @@ class ContactListAdapter(contactList: List<Contact>, private val mOnClickListene
         return contactList.size
     }
 
-    inner class ContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
+    class ContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+        fun bind(c: Contact, clickListener: (Contact) -> Unit) {
             val tvFullName = itemView.tvFullName
             val tvCellPhone = itemView.tvPhone
 
-        override fun onClick(v: View?) {
-            val clickedPosition = getAdapterPosition()
-            mOnClickListener.onListItemClick(clickedPosition)
-
+            tvFullName.text = c.firstName + " " + c.lastName
+            tvCellPhone.text = c.cellPhone
+            itemView.setOnClickListener { clickListener(c) }
         }
 
     }

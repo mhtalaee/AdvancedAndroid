@@ -43,7 +43,7 @@ class ContactListActivity : AppCompatActivity() {
 
         alertDialogBuilder.setPositiveButton("Yes") { dialog, which ->
             val db = OpenDBHelper(this@ContactListActivity, "JavaDB", null, 1)
-            db.deleteContact(c.id)
+            db.deleteContact(c.id!!)
             var list = db.fetchContacts()
             var rvAdapter = ContactListAdapter(list, { c: Contact -> contactItemClicked(c) })
             rvContactList.adapter = rvAdapter

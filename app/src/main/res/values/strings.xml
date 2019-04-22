@@ -20,5 +20,6 @@
     <string name="lAwards" translatable="false">Awards:</string>
     <string name="lImdb" translatable="false">IMDB</string>
     <string name="lCountry">Country</string>
+    <string name="lRate">Rate:</string>
 
 </resources>

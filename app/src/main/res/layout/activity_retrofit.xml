@@ -3,7 +3,7 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/colorAccent"
+              android:background="@color/intent_task_color"
               android:orientation="vertical"
               tools:context=".RetrofitActivity">
 
@@ -124,10 +124,10 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:background="#FFFFFF"
-                        android:text="@string/lGenre" />
+                        android:text="@string/lDirector" />
 
                 <TextView
-                        android:id="@+id/tvGenre"
+                        android:id="@+id/tvDirector"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -147,10 +147,10 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:background="#FFFFFF"
-                        android:text="@string/lDirector" />
+                        android:text="@string/lRate" />
 
                 <TextView
-                        android:id="@+id/tvDirector"
+                        android:id="@+id/tvRate"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -160,6 +160,28 @@
         </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#FFFFFF"
+                android:text="@string/lGenre" />
+
+        <TextView
+                android:id="@+id/tvGenre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#FFFFFF" />
+    </LinearLayout>
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -1,12 +1,11 @@
-package ir.goldenmind.advancedandroid.adapters
+package ir.goldenmind.advancedandroid.kotlinversion.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ir.goldenmind.advancedandroid.Contact
+import ir.goldenmind.advancedandroid.kotlinversion.model.Contact
 import ir.goldenmind.advancedandroid.R
-import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.contact_recyclerview_item.view.*
 
 class ContactListAdapter(contactList: List<Contact>, val clickListener: (Contact) -> Unit) :

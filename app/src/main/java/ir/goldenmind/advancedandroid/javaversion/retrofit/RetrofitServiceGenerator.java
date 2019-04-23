@@ -1,6 +1,6 @@
-package ir.goldenmind.advancedandroid.retrofit;
+package ir.goldenmind.advancedandroid.javaversion.retrofit;
 
-import ir.goldenmind.advancedandroid.utillity.Consts;
+import ir.goldenmind.advancedandroid.kotlinversion.utillity.Consts;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

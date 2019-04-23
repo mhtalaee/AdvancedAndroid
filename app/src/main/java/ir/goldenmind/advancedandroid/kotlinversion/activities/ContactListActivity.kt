@@ -1,16 +1,14 @@
-package ir.goldenmind.advancedandroid
+package ir.goldenmind.advancedandroid.kotlinversion.activities
 
-import android.Manifest
-import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import ir.goldenmind.advancedandroid.adapters.ContactListAdapter
-import ir.goldenmind.advancedandroid.db.OpenDBHelper
+import ir.goldenmind.advancedandroid.R
+import ir.goldenmind.advancedandroid.kotlinversion.model.Contact
+import ir.goldenmind.advancedandroid.kotlinversion.adapters.ContactListAdapter
+import ir.goldenmind.advancedandroid.kotlinversion.db.OpenDBHelper
 import kotlinx.android.synthetic.main.activity_contact_list.*
 
 class ContactListActivity : AppCompatActivity() {
@@ -30,7 +28,6 @@ class ContactListActivity : AppCompatActivity() {
         btnBack.setOnClickListener {
             finish()
         }
-
     }
 
     private fun contactItemClicked(c : Contact) {

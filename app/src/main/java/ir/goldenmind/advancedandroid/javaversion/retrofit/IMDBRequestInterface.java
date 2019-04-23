@@ -1,6 +1,6 @@
-package ir.goldenmind.advancedandroid.retrofit;
+package ir.goldenmind.advancedandroid.javaversion.retrofit;
 
-import ir.goldenmind.advancedandroid.imdb.IMDBResponse;
+import ir.goldenmind.advancedandroid.javaversion.imdb.IMDBResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;

@@ -1,4 +1,4 @@
-package ir.goldenmind.advancedandroid
+package ir.goldenmind.advancedandroid.kotlinversion.model
 
 class Contact {
 

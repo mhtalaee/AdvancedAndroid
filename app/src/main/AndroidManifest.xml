@@ -11,19 +11,19 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".RetrofitKotlinActivity">
+        <activity android:name=".kotlinversion.activities.RetrofitActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".RetrofitActivity">
+        <activity android:name=".javaversion.activities.RetrofitActivity">
 
         </activity>
-        <activity android:name=".ContactListActivity">
+        <activity android:name=".kotlinversion.activities.ContactListActivity">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".kotlinversion.activities.MainActivity">
         </activity>
     </application>
 

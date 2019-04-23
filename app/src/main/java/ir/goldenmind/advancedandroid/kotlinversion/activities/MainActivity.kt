@@ -1,12 +1,11 @@
-package ir.goldenmind.advancedandroid
+package ir.goldenmind.advancedandroid.kotlinversion.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import android.widget.Toast
-import ir.goldenmind.advancedandroid.db.OpenDBHelper
+import ir.goldenmind.advancedandroid.R
+import ir.goldenmind.advancedandroid.kotlinversion.db.OpenDBHelper
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

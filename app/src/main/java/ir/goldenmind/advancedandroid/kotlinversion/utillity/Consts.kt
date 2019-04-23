@@ -1,4 +1,4 @@
-package ir.goldenmind.advancedandroid.utillity
+package ir.goldenmind.advancedandroid.kotlinversion.utillity
 
 object Consts {
     val IMDB_WEBSERVICE_BASE_URL = "http://www.omdbapi.com"

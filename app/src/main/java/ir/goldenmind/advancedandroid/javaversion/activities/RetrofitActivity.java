@@ -1,14 +1,15 @@
-package ir.goldenmind.advancedandroid;
+package ir.goldenmind.advancedandroid.javaversion.activities;
 
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.squareup.picasso.Picasso;
-import ir.goldenmind.advancedandroid.imdb.IMDBResponse;
-import ir.goldenmind.advancedandroid.retrofit.IMDBRequestInterface;
-import ir.goldenmind.advancedandroid.retrofit.RetrofitServiceGenerator;
-import ir.goldenmind.advancedandroid.utillity.Consts;
+import ir.goldenmind.advancedandroid.R;
+import ir.goldenmind.advancedandroid.javaversion.imdb.IMDBResponse;
+import ir.goldenmind.advancedandroid.javaversion.retrofit.IMDBRequestInterface;
+import ir.goldenmind.advancedandroid.javaversion.retrofit.RetrofitServiceGenerator;
+import ir.goldenmind.advancedandroid.kotlinversion.utillity.Consts;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -69,7 +70,6 @@ public class RetrofitActivity extends AppCompatActivity {
                         tvCountry.setText(response.body().getCountry());
                         tvAwards.setText(response.body().getAwards());
                         Picasso.get().load(response.body().getPoster()).into(imgMoviePoster);
-
                     }
 
                     @Override

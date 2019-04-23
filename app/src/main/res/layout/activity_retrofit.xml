@@ -5,7 +5,7 @@
               android:layout_height="match_parent"
               android:background="@color/intent_task_color"
               android:orientation="vertical"
-              tools:context=".RetrofitActivity">
+              tools:context=".javaversion.activities.RetrofitActivity">
 
     <LinearLayout
             android:layout_width="match_parent"

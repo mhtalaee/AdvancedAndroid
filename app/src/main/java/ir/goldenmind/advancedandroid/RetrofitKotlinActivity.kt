@@ -2,6 +2,7 @@ package ir.goldenmind.advancedandroid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.squareup.picasso.Picasso
 import ir.goldenmind.advancedandroid.imdb.IMDBResponse
 import ir.goldenmind.advancedandroid.retrofit.IMDBRequestInterface
@@ -36,10 +37,10 @@ class RetrofitKotlinActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(call: Call<IMDBResponse>, t: Throwable) {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    Toast.makeText(this@RetrofitKotlinActivity, "Error fetching movie info", Toast.LENGTH_SHORT).show();
+
                 }
             })
-
 
     }
 }

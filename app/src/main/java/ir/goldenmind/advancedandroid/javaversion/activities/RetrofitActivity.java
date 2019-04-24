@@ -9,7 +9,7 @@ import ir.goldenmind.advancedandroid.R;
 import ir.goldenmind.advancedandroid.javaversion.imdb.IMDBResponse;
 import ir.goldenmind.advancedandroid.javaversion.retrofit.IMDBRequestInterface;
 import ir.goldenmind.advancedandroid.javaversion.retrofit.RetrofitServiceGenerator;
-import ir.goldenmind.advancedandroid.kotlinversion.utillity.Consts;
+import ir.goldenmind.advancedandroid.javaversion.utility.Consts;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -56,7 +56,7 @@ public class RetrofitActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                imdbRequestInterface.getMovieInfo(etMovieName.getText().toString(), Consts.INSTANCE.getAPI_KEY()).enqueue(new Callback<IMDBResponse>() {
+                imdbRequestInterface.getMovieInfo(etMovieName.getText().toString(), Consts.API_KEY).enqueue(new Callback<IMDBResponse>() {
                     @Override
                     public void onResponse(Call<IMDBResponse> call, Response<IMDBResponse> response) {
 

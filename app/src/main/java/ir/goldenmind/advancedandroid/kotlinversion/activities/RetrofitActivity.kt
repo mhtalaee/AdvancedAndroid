@@ -43,7 +43,12 @@ class RetrofitActivity : AppCompatActivity() {
                             .show();
                     }
                 })
-        }
 
+        }
     }
+
+    //returns False if MovieName contains non-numeric & non-alphabetic characters
+    fun checkForInvalidCharacters(inputString: String) = inputString.matches(Regex("^([A-Za-z]|[0-9])+$"))
+
+    fun checkForMinLength(inputString: String?) = (inputString?.length ?: 0) > 2
 }

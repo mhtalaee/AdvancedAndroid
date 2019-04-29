@@ -93,3 +93,8 @@ cast is done automatically after comparission
     } catch (e: ArithmeticException) {
         throw IllegalStateException(e)
     }	
+
+20. arrayListOf("a", "b", "c") //returns a mutable collection type
+    listOf("a", "b", "c") //returns a immutable collection type
+    
+21.  { it > 0 } //replace parameter with "it" in Lambada function with only one parameter    

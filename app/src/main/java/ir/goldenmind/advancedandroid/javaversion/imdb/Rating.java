@@ -13,6 +13,8 @@ public class Rating {
     @Expose
     private String value;
 
+    public String abc;
+
     public Rating(){}
 
     public Rating(String source) {

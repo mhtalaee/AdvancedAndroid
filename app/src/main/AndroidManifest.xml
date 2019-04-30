@@ -15,17 +15,17 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".kotlinversion.activities.UiTest">
+        <activity android:name=".javaversion.activities.TestUiActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <activity android:name=".kotlinversion.activities.RetrofitActivity">
         </activity>
         <activity android:name=".javaversion.activities.RetrofitActivity">
-
         </activity>
         <activity android:name=".kotlinversion.activities.ContactListActivity">
         </activity>

@@ -13,6 +13,13 @@ public class Rating {
     @Expose
     private String value;
 
+    public Rating(){}
+
+    public Rating(String source) {
+        this.source = source;
+    }
+
+
     public String getSource() {
         return source;
     }
@@ -21,8 +28,9 @@ public class Rating {
         this.source = source;
     }
 
-    public String getValue() {
-        return value;
+    public String getValue(String str) {
+
+        return  "-----" + str + "-----";
     }
 
     public void setValue(String value) {

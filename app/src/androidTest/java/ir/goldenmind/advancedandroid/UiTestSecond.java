@@ -1,6 +1,5 @@
 package ir.goldenmind.advancedandroid;
 
-import androidx.test.espresso.action.ViewActions;
 import ir.goldenmind.advancedandroid.kotlinversion.activities.MainActivity;
 import org.junit.Before;
 import org.junit.Rule;
@@ -14,7 +13,6 @@ import androidx.test.runner.AndroidJUnit4;
 
 import ir.goldenmind.advancedandroid.javaversion.activities.TestUiActivity;
 
-import static androidx.test.espresso.Espresso.closeSoftKeyboard;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.typeText;
@@ -24,23 +22,24 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class UiTest {
+public class UiTestSecond {
 
     private Integer inputNumber;
 
     @Rule
     public ActivityTestRule<TestUiActivity> activityRule = new ActivityTestRule<>(TestUiActivity.class);
+    private TestUiActivity testUiActivity = null;
 
     @Before
     public void initValidString() {
         inputNumber = 1;
+        testUiActivity = activityRule.getActivity();
     }
 
     @Test
     public void changeText_sameActivity() {
 
-       onView(withId(R.id.etNumber)).perform(typeText(inputNumber.toString()), ViewActions.closeSoftKeyboard());
-       onView(withId(R.id.btnOk)).perform(click());
-       onView(withId(R.id.imgOdd)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
+        testUiActivity.setImage("1");
+        onView(withId(R.id.imgOdd)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
     }
 }

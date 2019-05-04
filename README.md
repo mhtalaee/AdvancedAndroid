@@ -98,3 +98,13 @@ cast is done automatically after comparission
     listOf("a", "b", "c") //returns a immutable collection type
     
 21.  { it > 0 } //replace parameter with "it" in Lambada function with only one parameter    
+
+22. 'if' branches can be blocks, and the last expression is the value of a block:
+	val max = if (a > b) {
+    		print("Choose a")
+    		a
+	} else {
+    		print("Choose b")
+    		b
+	}
+

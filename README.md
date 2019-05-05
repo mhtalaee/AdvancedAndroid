@@ -143,3 +143,11 @@ cast is done automatically after comparission
 class Derived() : Base() {
     override fun v() { ... }
 }
+
+29. init block of base class is done before the init block of derived class.
+
+30. Code in a derived class can call its superclass functions and property using the 'super' keyword
+    Inside an inner class, accessing the superclass of the outer class is done with the 'super' keyword with the outer class name: super@Outer:
+
+
+

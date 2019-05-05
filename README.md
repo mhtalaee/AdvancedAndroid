@@ -123,4 +123,23 @@ cast is done automatically after comparission
         		parent.children.add(this)
     		}
 	}
-	
+
+25. Kotlin class members: Constuctors, initializer blocks, functions, properties, nested classes, inner classes, object declarations
+
+26. All classes in Kotlin have a common superclass 'Any'. This class does not have any members other than equals(), hashCode() and toString()
+
+27. Inheritance:
+     If the derived class has a primary constructor, the base class can (and must) be initialized right there
+     If the class has no primary constructor, then each secondary constructor has to initialize the base type using the 'super' keyword
+
+28. 'open' keyword: is used before overridable Functions & Properties
+    'override' keyword is used before Functions & Properties which are to override
+ 
+ open class Base {
+    open fun v() { ... }
+    fun nv() { ... }
+}
+
+class Derived() : Base() {
+    override fun v() { ... }
+}

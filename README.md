@@ -108,3 +108,19 @@ cast is done automatically after comparission
     		b
 	}
 
+23. If the primary constructor has annotations or visibility modifiers, the constructor keyword is required, and the modifiers go before it:
+	class Customer public @Inject constructor(name: String) { ... }
+	
+	
+24. I. Initializer blocks are part of the primary constructor, so the code in all initializer blocks is executed before the secondary       constructor body
+    II. If the class has a primary constructor, each secondary constructor needs to delegate to the primary constructor
+    
+	class Person(val name: String) {
+		init {
+        		println("Init block")
+    		}
+    		constructor(name: String, parent: Person) : this(name) {
+        		parent.children.add(this)
+    		}
+	}
+	

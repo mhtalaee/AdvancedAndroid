@@ -183,6 +183,36 @@ class Derived() : Base() {
     	   // the `else` clause is not required because we've covered all the cases
 	  }
 	
+32. Collections
+
+	Array: It's a class and is a sequential fixed-size.
+	
+		var arr = Array<Int>(3){1,2,3}
+		var arr = arrayOf<Int>(1,10,4,6,15)  
+		
+	   Array is mutable which means we can perform both read and writes operations
+		
+		arr[1] = 10
+		
+		
+		
+	ArrayList: It's a class and is used to create a dynamic array
+	
+		val arrList = ArrayList<String>()
+		val arrList = arrayListOf<String>()
+		
+	  ArrayList is mutable which means we can perform both read and writes operations
+	  
+	  	arrList.set(2,"Rohan")  
+	  	
+		
+		
+	List: It's an interface and inherits form Collection<T>.
+	
+		var list = listOf("Ajay","Vijay","Prakash")
+		
+	  List is immutable and its methods supports only read functionalities	
+
 	
 
 

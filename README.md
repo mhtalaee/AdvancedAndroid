@@ -150,9 +150,10 @@ class Derived() : Base() {
     Inside an inner class, accessing the superclass of the outer class is done with the 'super' keyword with the outer class name: super@Outer:
 
 31. sealed class: subclasses of a sealed class must be declared in the same file as the sealed class itself
-	sealed class Expr
-	data class Const(val number: Double) : Expr()
-	data class Sum(val e1: Expr, val e2: Expr) : Expr()
-	object NotANumber : Expr()
+	<code class="language-kotlin">sealed class Expr
+data class Const(val number: Double) : Expr()
+data class Sum(val e1: Expr, val e2: Expr) : Expr()
+object NotANumber : Expr()
+</code>
 
 

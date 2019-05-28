@@ -41,15 +41,15 @@ class OpenDBHelper(context: Context, name: String, factory: SQLiteDatabase.Curso
         var db = this.readableDatabase
         var cursor = db.rawQuery("SELECT * FROM tbl_contacts ORDER BY 1 DESC", null)
 
-        while (cursor.moveToNext()) {
-            val contact = Contact()
-            contact.id = cursor.getInt(0)
-            contact.firstName = cursor.getString(1)
-            contact.lastName = cursor.getString(2)
-            contact.cellPhone = cursor.getString(3)
-            list.add(contact)
-
-        }
+//        while (cursor.moveToNext()) {
+//            val contact = Contact()
+//            contact.id = cursor.getInt(0)
+//            contact.firstName = cursor.getString(1)
+//            contact.lastName = cursor.getString(2)
+//            contact.cellPhone = cursor.getString(3)
+//            list.add(contact)
+//
+//        }
         db.close()
         return list
     }

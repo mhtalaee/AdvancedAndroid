@@ -20,15 +20,16 @@
         </activity>
 
         <activity android:name=".kotlinversion.activities.RetrofitActivity">
+
+        </activity>
+        <activity android:name=".javaversion.activities.RetrofitActivity">
+        </activity>
+        <activity android:name=".kotlinversion.activities.ContactListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name=".javaversion.activities.RetrofitActivity">
-        </activity>
-        <activity android:name=".kotlinversion.activities.ContactListActivity">
         </activity>
         <activity android:name=".kotlinversion.activities.MainActivity">
         </activity>

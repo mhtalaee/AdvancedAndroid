@@ -1,9 +1,14 @@
 package ir.goldenmind.advancedandroid.kotlinversion.model
 
-class Contact {
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-    var id: Int? = null
-    var firstName: String? = null
-    var lastName: String? = null
-    var cellPhone: String? = null
-}
+@Entity
+data class Contact(
+
+    @PrimaryKey var id: Int,
+    @ColumnInfo(name = "firs_name") var firstName: String?,
+    @ColumnInfo(name = "last_name") var lastName: String?,
+    @ColumnInfo(name = "cell_phone") var cellPhone: String?
+)

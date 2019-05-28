@@ -5,9 +5,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Room
 import ir.goldenmind.advancedandroid.R
 import ir.goldenmind.advancedandroid.kotlinversion.model.Contact
 import ir.goldenmind.advancedandroid.kotlinversion.adapters.ContactListAdapter
+import ir.goldenmind.advancedandroid.kotlinversion.db.AppDatabase
 import ir.goldenmind.advancedandroid.kotlinversion.db.OpenDBHelper
 import kotlinx.android.synthetic.main.activity_contact_list.*
 
@@ -17,6 +19,12 @@ class ContactListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_list)
+
+        val db1 = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java, "appDB"
+        ).build()
+
 
         val db = OpenDBHelper(this@ContactListActivity, "JavaDB", null, 1)
         var list = db.fetchContacts()

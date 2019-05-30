@@ -6,5 +6,5 @@ import ir.goldenmind.advancedandroid.kotlinversion.model.Contact
 
 @Database(entities = arrayOf(Contact::class), version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun userDao(): ContactDao
+    abstract fun contactDao(): ContactDao
 }

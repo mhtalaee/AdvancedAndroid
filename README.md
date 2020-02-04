@@ -225,6 +225,14 @@ class Derived() : Base() {
 		var list = listOf("Ajay","Vijay","Prakash")
 		
 	  List is immutable and its methods supports only read functionalities	
+	  
+	  
+33.  data class: to create classes like pojo classes in Java with getter and setter methods but with fewer code
+
+			data class KtPersonClass(val name: String,
+						 val family: String,
+						 val age: Int)
+						 
 
 	
 

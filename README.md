@@ -101,6 +101,12 @@ this is equal to "public static final" in Java
 		object Consts {
 	          val BASE_URL = "http://ap...."
 		}
+all variables in "object" will be Constants
+but for define constant in a class (not object) use companion object:
+
+		companion object {
+		   val BASE_URL = "http://ap...."
+		}
 		
 18.Get first item of a possibly empty collection
 

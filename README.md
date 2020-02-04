@@ -96,6 +96,12 @@ cast is done automatically after comparission
 		  val name = "Name"
 		}
 		
+this is equal to "public static final" in Java
+		
+		object Consts {
+	          val BASE_URL = "http://ap...."
+		}
+		
 18.Get first item of a possibly empty collection
 
 	emails.firstOrNull()		

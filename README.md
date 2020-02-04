@@ -151,7 +151,8 @@ cast is done automatically after comparission
      If the class has no primary constructor, then each secondary constructor has to initialize the base type using the 'super' keyword
 
 28. 'open' keyword: is used before overridable Functions & Properties
-    'override' keyword is used before Functions & Properties which are to override
+    'override' keyword is used before Functions & Properties which are to override.
+    In Kotlin, all the classes are final by default. they can't be inherited by default. This is opposite to Java
  
  open class Base {
     open fun v() { ... }
